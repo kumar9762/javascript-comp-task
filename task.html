@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      .hidden {
+        display: none;
+      }
+
+      .Rectangle1503 {
+        width: 100%;
+        max-width: 748px;
+        margin: 0 auto;
+        padding: 10px;
+      }
+
+      .BundleSave {
+        text-align: center;
+        color: #007f61;
+        font-size: 18.08px;
+        font-family: "Metropolis", sans-serif;
+        font-weight: 500;
+        word-wrap: break-word;
+        line-height: normal;
+      }
+
+      .Rectangle43 {
+        width: 100%;
+        max-width: 340.734px;
+        margin: 10px auto;
+        padding: 10px;
+        border-radius: 3.615px;
+        border: 0.904px solid #c8c8c8;
+        background: #fff;
+        cursor: pointer;
+        transition: height 0.5s;
+      }
+
+      .Rectangle44 {
+        width: 100%;
+        max-width: 340.734px;
+        margin: 10px auto;
+        padding: 10px;
+
+        background: #fff;
+        cursor: pointer;
+        transition: height 0.5s;
+      }
+
+      .Rectangle43:hover {
+        background-color: #f2f2f2;
+      }
+
+      .hidden-data {
+        display: none;
+        padding: 10px;
+      }
+      .line-wrapper {
+        display: flex;
+        align-items: center;
+        width: 50%;
+      }
+
+      .line {
+        flex-grow: 1;
+        height: 1px;
+        background-color: black;
+        margin: 0 10px;
+      }
+      .button {
+        color: #f2f2f2;
+        background-color: #007f61;
+        height: 50px;
+        width: 350px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="Rectangle1503">
+      <div style="display: flex; justify-content: center">
+        <div class="line-wrapper">
+          <hr class="line" />
+          BundleSave
+          <hr class="line" />
+        </div>
+      </div>
+
+      <br />
+
+      <div
+        class="Rectangle43 box"
+        id="container1"
+        onclick="toggleDetails('hiddenData1', 'container1')"
+      >
+        <div>
+          <div style="display: flex; margin-top: 15px">
+            <div>
+              <label for="showRadio1">
+                <input
+                  type="radio"
+                  style="margin-top: 15px"
+                  name="showHide"
+                  value="show"
+                  id="showRadio1"
+                />
+              </label>
+            </div>
+            <div>
+              <span class="">1 Pair</span><br />
+              <span class="">DKK 195.00</span>
+             
+            </div>
+            <div> <span style="margin-left: 150px;">50%OFF</span></div>
+          </div>
+          <div id="hiddenData1" class="hidden-data">
+            <table>
+              <tr>
+                <td></td>
+                <td class="box">Sizes</td>
+                <td class="box">Colour</td>
+              </tr>
+              <tr>
+                <td class="text">#1</td>
+                <td>
+                  <select name="" id="" class="box">
+                    <option value="" selected>S</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="" id="">
+                    <option value="" selected>Colour</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>#2</td>
+                <td>
+                  <select name="" id="">
+                    <option value="" selected>S</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="" id="">
+                    <option value="" selected>Colour</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <br />
+
+      <div
+        class="Rectangle43 box"
+        id="container2"
+        onclick="toggleDetails('hiddenData2', 'container2')"
+      >
+        <div>
+          <div style="display: flex; margin-top: 10px">
+            <div>
+              <label for="showRadio2">
+                <input
+                  type="radio"
+                  style="margin-top: 15px"
+                  name="showHide"
+                  value="show"
+                  id="showRadio2"
+                />
+              </label>
+            </div>
+            <div>
+              <span>2 Pair</span
+              ><span class="Rec43" style="margin-left: 100px;color: #007f61;">Most Popular</span
+              ><br />
+              <span>DKK 345.00</span>
+              <span class=""
+                ><small><del style="margin-left: 10px">DKK:195.00</del></small>
+                <a style="margin-left: 30px">40%OFF</a>
+              </span>
+            </div>
+          </div>
+          <div id="hiddenData2" class="hidden-data">
+            <table>
+              <tr>
+                <td></td>
+                <td class="box">Sizes</td>
+                <td class="box">Colour</td>
+              </tr>
+              <tr>
+                <td class="text">#1</td>
+                <td>
+                  <select name="" id="" class="box">
+                    <option value="" selected>S</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="" id="">
+                    <option value="" selected>Colour</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>#2</td>
+                <td>
+                  <select name="" id="">
+                    <option value="" selected>S</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="" id="">
+                    <option value="" selected>Colour</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <br />
+
+      <div
+        class="Rectangle43 box"
+        id="container3"
+        onclick="toggleDetails('hiddenData3', 'container3')"
+      >
+        <div>
+          <div style="display: flex; margin-top: 15px">
+            <div>
+              <label for="showRadio1">
+                <input
+                  type="radio"
+                  style="margin-top: 15px"
+                  name="showHide"
+                  value="show"
+                  id="showRadio1"
+                />
+              </label>
+            </div>
+            <div>
+              <span class="">3 Pair</span><br />
+              <span class="">DKK 528.00</span>
+              
+            </div>
+            <div> <span style="margin-left: 150px;">60%OFF</span></div>
+          </div>
+          <div id="hiddenData3" class="hidden-data">
+            <table>
+              <tr>
+                <td></td>
+                <td class="box">Sizes</td>
+                <td class="box">Colour</td>
+              </tr>
+              <tr>
+                <td class="text">#1</td>
+                <td>
+                  <select name="" id="" class="box">
+                    <option value="" selected>S</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="" id="">
+                    <option value="" selected>Colour</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>#2</td>
+                <td>
+                  <select name="" id="">
+                    <option value="" selected>S</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="" id="">
+                    <option value="" selected>Colour</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="Rectangle44" style="margin-top: 20px">
+        <span
+          ><a style="color: #007f61">Free 2 Day shipping</a>
+          <span style="margin-left: 70px">Total DDK:360.00</span>
+        </span>
+        <button class="button">+ Add to cart</button>
+        <div>
+            <span style="margin-left: 180px;">&copy;</span>Powered by Pumper
+        </div>
+      </div>
+     
+    </div>
+
+    <script>
+      let openContainerId = null;
+
+      function toggleDetails(hiddenDataId, containerId) {
+        const container = document.getElementById(containerId);
+        const hiddenData = document.getElementById(hiddenDataId);
+
+        if (openContainerId && openContainerId !== containerId) {
+          // Close the previously opened container
+          const openContainer = document.getElementById(openContainerId);
+          const openHiddenData = document.getElementById(
+            "hiddenData" + openContainerId
+          );
+          if (openContainer) {
+            openContainer.style.height = "74.112px";
+            openContainer.style.border = "0.9px #c8c8c8 solid";
+          }
+          if (openHiddenData) {
+            openHiddenData.style.display = "none";
+          }
+        }
+
+        // Toggle the height and border of the container
+        if (container) {
+          container.style.height =
+            container.style.height === "200px" ? "74.112px" : "200px";
+            if (container.style.height == "74.112px") {
+                
+                document.getElementById('hiddenData1').style.display=' block'
+                document.getElementById('hiddenData2').style.display=' block'
+                document.getElementById('hiddenData3').style.display=' block'
+            }else{
+                document.getElementById('hiddenData1').style.display='none'
+                document.getElementById('hiddenData2').style.display='none'
+                document.getElementById('hiddenData3').style.display='none'
+            }
+           
+          container.style.border =
+            container.style.border === "2px solid  #04c5f5"
+              ? "0.9px #c8c8c8 solid"
+              : "2px solid rgb(3, 147, 27)";
+        }
+
+        // Toggle the visibility of the hidden data
+        if (hiddenData) {
+          hiddenData.style.display =
+            container.style.height === "200px" ? "block" : "none";
+        }
+
+        // Update the openContainerId
+        openContainerId = containerId;
+      }
+    </script>
+  </body>
+</html>
