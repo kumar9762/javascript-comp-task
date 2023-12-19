@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Interview Task - Shopping Cart</title>
     <style type="text/css">
       .hidden {
         display: none;
@@ -116,7 +116,7 @@
             </div>
             <div> <span style="margin-left: 150px;">50%OFF</span></div>
           </div>
-          <div id="hiddenData1" class="hidden-data">
+          <div id="hiddenData1" class="hidden-data" style="display: none;">
             <table>
               <tr>
                 <td></td>
@@ -185,7 +185,7 @@
               </span>
             </div>
           </div>
-          <div id="hiddenData2" class="hidden-data">
+          <div id="hiddenData2" class="hidden-data" style="display: none;">
             <table>
               <tr>
                 <td></td>
@@ -250,7 +250,7 @@
             </div>
             <div> <span style="margin-left: 150px;">60%OFF</span></div>
           </div>
-          <div id="hiddenData3" class="hidden-data">
+          <div id="hiddenData3" class="hidden-data" style="display: none;">
             <table>
               <tr>
                 <td></td>
@@ -301,60 +301,44 @@
     </div>
 
     <script>
-      let openContainerId = null;
+     let openContainerId = null;
 
       function toggleDetails(hiddenDataId, containerId) {
         const container = document.getElementById(containerId);
         const hiddenData = document.getElementById(hiddenDataId);
 
-        if (openContainerId && openContainerId !== containerId) {
-          // Close the previously opened container
-          const openContainer = document.getElementById(openContainerId);
-          const openHiddenData = document.getElementById(
-            "hiddenData" + openContainerId
-          );
-          if (openContainer) {
-            openContainer.style.height = "74.112px";
-            openContainer.style.border = "0.9px #c8c8c8 solid";
-          }
-          if (openHiddenData) {
-            openHiddenData.style.display = "none";
-          }
-        }
+        const allContainers = document.querySelectorAll('.Rectangle43');
+        allContainers.forEach((c) => {
+          if (c.id !== containerId) {
+            c.style.height = "74.112px";
+            c.style.border = "0.9px #c8c8c8 solid";
 
-        // Toggle the height and border of the container
+            const otherHiddenData = document.getElementById(
+              "hiddenData" + c.id.replace('container', '')
+            );
+            if (otherHiddenData) {
+              otherHiddenData.style.display = "none";
+            }
+          }
+        });
+
         if (container) {
           container.style.height =
             container.style.height === "200px" ? "74.112px" : "200px";
-            if (container.style.height == "74.112px") {
-                
-                document.getElementById('hiddenData1').style.display=' block'
-                document.getElementById('hiddenData2').style.display=' block'
-                document.getElementById('hiddenData3').style.display=' block'
-            }else{
-                document.getElementById('hiddenData1').style.display='none'
-                document.getElementById('hiddenData2').style.display='none'
-                document.getElementById('hiddenData3').style.display='none'
-            }
-  //           const hiddenDataElements = document.getElementsByClassName("hidden-data");
-  //   for (let i = 0; i < hiddenDataElements.length; i++) {
-  //  console.log(hiddenDataElements[i]);
-  //   }
+
           container.style.border =
             container.style.border === "2px solid  #04c5f5"
               ? "0.9px #c8c8c8 solid"
               : "2px solid rgb(3, 147, 27)";
         }
 
-        // Toggle the visibility of the hidden data
         if (hiddenData) {
           hiddenData.style.display =
             container.style.height === "200px" ? "block" : "none";
         }
 
-        // Update the openContainerId
-        openContainerId = containerId;
+        openContainerId = container.style.height === "200px" ? containerId : null;
       }
-    </script>
+</script>
   </body>
 </html>
